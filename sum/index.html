@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Numbers::Sum</title>
     <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <nav class="navigation"></nav>
+
+    <div id="controls">
+        <div class="control" id="creator">
+            <!-- Här ska de gemensamma creator-elementen appendas från common.js. -->
+        </div>
+        <div class="control">
+            <div class="padded">Sum of all: </div>
+            <div id="sumResultAll" class="result padded">-</div>
+        </div>
+        <div class="control">
+            <div class="padded">Sum of marked: </div>
+            <div id="sumResultMarked" class="result padded">-</div>
+            <div>
+                <button id="reset" class="padded">Reset</button>
+            </div>
+        </div>
+    </div>
+    <div id="numbers"></div>
     <script src="../common.js"></script>
 </body>
 

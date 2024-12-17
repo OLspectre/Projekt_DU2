@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Numbers::Remove</title>
     <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <nav class="navigation"></nav>
+
+    <div id="controls">
+        <div class="control" id="creator">
+            <!-- Här ska de gemensamma creator-elementen appendas från common.js. -->
+        </div>
+        <div class="control">
+            <button id="reset" class="padded">New Random Number</button>
+            <div id="showRandomNumber" class="result padded">-</div>
+            <button id="remove" class="padded">Remove</button>
+            <div id="showRemovedNumber" class="result padded">-</div>
+        </div>
+
+    </div>
+    <div id="numbers"></div>
     <script src="../common.js"></script>
 
 </body>
