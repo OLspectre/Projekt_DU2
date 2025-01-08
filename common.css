@@ -54,7 +54,7 @@ nav {
     font-size: 15px;
 }
 
-#numbers div {
+.numberBoxes {
     border: 1px solid black;
     background-color: rgb(236, 236, 236);
     border-radius: 10px;
