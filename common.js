@@ -17,6 +17,29 @@ let createButton = document.createElement("button");
 createButton.textContent = "Create"
 document.getElementById("creator").appendChild(createButton);
 
+let numbersContainer = document.getElementById("numbers");
+
+// Töm container vid laddning
+numbersContainer.innerHTML = "";
+
+function createNumberDivs(amount) {
+    // Fyller container med celler
+    for (let i = 0; i < amount; i++) {
+        let divWithNumber = document.createElement("div");
+        numbersContainer.appendChild(divWithNumber);
+        divWithNumber.textContent = "77";
+    }
+}
+
+createButton.addEventListener("click", function () {
+    createNumberDivs(createNumberInput.value)
+})
+
+
+// randomNumber(1, 100);
+
+
+
 
 
 
