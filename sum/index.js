@@ -35,3 +35,10 @@ container.addEventListener("click", (event) => {
     }
 });
 
+resetBtn.addEventListener("click", () => {
+    markedSum = 0;
+    showSumOfMarked.textContent = "-";
+    for (currentBox of document.getElementsByClassName("numberBoxes")) {
+        currentBox.classList.remove("marked");
+    }
+});
