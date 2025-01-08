@@ -24,19 +24,23 @@ numbersContainer.innerHTML = "";
 
 function createNumberDivs(amount) {
     // Fyller container med celler
+    numbersContainer.innerHTML = "";
+
     for (let i = 0; i < amount; i++) {
         let divWithNumber = document.createElement("div");
         numbersContainer.appendChild(divWithNumber);
-        divWithNumber.textContent = "77";
+        divWithNumber.textContent = randomNumber(1, 100);
     }
+}
+
+function randomNumber(min, max) {
+    // returnerar random siffra mellan min och max
+    return Math.floor(min + (max - min) * Math.random());
 }
 
 createButton.addEventListener("click", function () {
     createNumberDivs(createNumberInput.value)
 })
-
-
-// randomNumber(1, 100);
 
 
 
