@@ -39,6 +39,15 @@ function randomNumber(min, max) {
     return Math.floor(min + (max - min) * Math.random());
 }
 
+// LOOPAR IGENOM ALLA NUMBERBOXES
+function loopThroughNumberBoxes(callback) {
+    for (let currentBox of document.querySelectorAll("#numbers div")) {
+        let number = Number(currentBox.textContent);
+        callback(currentBox, number); // Här anropas callbacken
+    }
+}
+
+
 createButton.addEventListener("click", function () {
     createNumberDivs(createNumberInput.value)
 })

@@ -4,18 +4,16 @@ let showSumOfAllNumbers = document.getElementById("sumResultAll");
 let showSumOfMarked = document.getElementById("sumResultMarked");
 let resetBtn = document.getElementById("reset");
 
+let markedSum = 0;
 
 function sumOfAllNumbers() {
-    let allNumbers = document.querySelectorAll("#numbers div");
     let sum = 0;
-    for (let currentNumber of allNumbers) {
-        let number = Number(currentNumber.textContent)
+    loopThroughNumberBoxes((currentBox, number) => {
+        currentBox.classList.remove("marked");
         sum += number;
-    }
+    });
     showSumOfAllNumbers.innerHTML = sum;
-}
-
-let markedSum = 0;
+};
 
 createButton.addEventListener("click", function () {
     createNumberDivs(createNumberInput.value)
@@ -37,8 +35,8 @@ container.addEventListener("click", (event) => {
 
 resetBtn.addEventListener("click", () => {
     markedSum = 0;
-    showSumOfMarked.textContent = "-";
-    for (currentBox of document.getElementsByClassName("numberBoxes")) {
+    loopThroughNumberBoxes((currentBox) => {
         currentBox.classList.remove("marked");
-    }
+    });
+    showSumOfMarked.textContent = "-";
 });
