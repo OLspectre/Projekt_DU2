@@ -10,13 +10,18 @@ let showRemovedNum = document.getElementById("showRemovedNumber")
 randomNumBtn.addEventListener("click", () => {
 
     let randomSelectedNumber = randomNumber(1, 100)
-    for (let currentNumber of document.getElementsByClassName("numberBoxes")) {
-        let number = Number(currentNumber.textContent)
+    console.log(randomSelectedNumber);
 
+    for (let currentNumber of document.getElementsByClassName("numberBoxes")) {
+        let number = Number(currentNumber.textContent);
+
+        currentNumber.classList.remove("marked")
         if (number == randomSelectedNumber) {
             currentNumber.classList.add("marked");
+
             // currentNumber.style.backgroundColor = "orange";
             console.log(currentNumber.textContent);
+
         }
     }
 });
