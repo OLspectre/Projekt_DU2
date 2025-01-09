@@ -34,6 +34,16 @@ function handleBoxEvents(event) {
     }
 }
 
+clearBtn.addEventListener("click", function () {
+    loopThroughNumberBoxes((currentBox) => {
+        if (currentBox.classList.contains("whenClicked")) {
+            currentBox.textContent = randomNumber(1, 100);
+            currentBox.classList.remove("noHover")
+            currentBox.classList.remove("whenClicked")
+        }
+    });
+});
+
 createButton.addEventListener("click", function () {
     loopThroughNumberBoxes((currentBox) => {
         currentBox.addEventListener("click", handleBoxEvents);
@@ -41,5 +51,3 @@ createButton.addEventListener("click", function () {
         currentBox.addEventListener("mouseout", handleBoxEvents);
     });
 });
-
-

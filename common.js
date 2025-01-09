@@ -47,7 +47,6 @@ function loopThroughNumberBoxes(callback) {
     }
 }
 
-
 createButton.addEventListener("click", function () {
     createNumberDivs(createNumberInput.value)
 })
