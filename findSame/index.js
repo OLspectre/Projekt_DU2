@@ -4,7 +4,12 @@ let displayText = document.getElementById("showCopies");
 let resetBtn = document.getElementById("reset");
 
 
-
+resetBtn.addEventListener("click", () => {
+    loopThroughNumberBoxes((currentBox) => {
+        displayText.textContent = "Click on a number to find copies";
+        currentBox.classList.remove("copy")
+    });
+});
 
 
 container.addEventListener("click", (event) => {
@@ -20,6 +25,6 @@ container.addEventListener("click", (event) => {
                 counterOfCopy++;
             }
         });
+        displayText.textContent = `${counterOfCopy} copies of the number ${event.target.textContent}`
     }
-    console.log(counterOfCopy);
 });
