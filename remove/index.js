@@ -19,24 +19,21 @@ randomNumBtn.addEventListener("click", () => {
     });
 });
 
-// removeBtn.addEventListener("click", () => {
 
-//     let randomSelectedNumber = randomNumber(1, 100)
-//     console.log(randomSelectedNumber);
+removeBtn.addEventListener("click", () => {
 
-//     for (let currentNumber of document.getElementsByClassName("numberBoxes")) {
-//         let number = Number(currentNumber.textContent);
-
-//         showRandomNum.textContent = randomSelectedNumber;
-//         currentNumber.classList.remove("marked")
-//         if (number == randomSelectedNumber) {
-//             currentNumber.classList.add("marked");
-
-//             // currentNumber.style.backgroundColor = "orange";
-//             console.log(currentNumber.textContent);
-//         }
-//     }
-// });
+    let counter = 0;
+    loopThroughNumberBoxes((currentBox) => {
+        if (currentBox.textContent == showRandomNum.textContent) {
+            counter++;
+        }
+        if (currentBox.classList.contains("marked")) {
+            currentBox.classList.add("removed");
+            currentBox.textContent = "X";
+            showRemovedNum.textContent = `${showRandomNum.textContent} was removed ${counter} times`
+        }
+    });
+});
 
 
 
