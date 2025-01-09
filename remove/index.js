@@ -15,6 +15,7 @@ randomNumBtn.addEventListener("click", () => {
     for (let currentNumber of document.getElementsByClassName("numberBoxes")) {
         let number = Number(currentNumber.textContent);
 
+        showRandomNum.textContent = randomSelectedNumber;
         currentNumber.classList.remove("marked")
         if (number == randomSelectedNumber) {
             currentNumber.classList.add("marked");
