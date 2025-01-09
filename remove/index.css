@@ -5,3 +5,13 @@
 #showRemovedNumber {
     min-width: 175px;
 }
+
+
+
+.marked {
+    background-color: orange;
+}
+
+.removed {
+    background-color: tomato;
+}
