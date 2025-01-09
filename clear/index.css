@@ -1,3 +1,15 @@
 /* #reset {
     width: 200px;
 } */
+
+.firstHover {
+    background-color: slateblue;
+}
+
+.whenClicked {
+    background-color: orange;
+}
+
+.noHover {
+    background-color: tomato;
+}
