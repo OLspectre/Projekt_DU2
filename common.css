@@ -1,8 +1,32 @@
+@font-face {
+    font-family: 'Rowdies';
+    src: url("fonts/Rowdies-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Rowdies';
+    src: url('fonts/Rowdies-Light.ttf');
+    font-weight: 300;
+}
+
 body {
     background-image: linear-gradient(white, skyblue);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    font-family: "Rowdies";
+    font-weight: lighter;
+}
+
+button,
+input {
+    font-family: "Rowdies";
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
 }
 
 nav {
@@ -61,4 +85,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Rowdies";
+    font-weight: normal;
 }
