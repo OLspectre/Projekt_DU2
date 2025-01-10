@@ -8,7 +8,7 @@ let showRemovedNum = document.getElementById("showRemovedNumber")
 
 
 randomNumBtn.addEventListener("click", () => {
-    let randomSelectedNumber = randomNumber(1, 100)
+    let randomSelectedNumber = randomNumber(0, 100)
 
     loopThroughNumberBoxes((currentBox, number) => {
         showRandomNum.textContent = randomSelectedNumber;

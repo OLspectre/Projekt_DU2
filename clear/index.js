@@ -37,7 +37,7 @@ function handleBoxEvents(event) {
 clearBtn.addEventListener("click", function () {
     loopThroughNumberBoxes((currentBox) => {
         if (currentBox.classList.contains("whenClicked")) {
-            currentBox.textContent = randomNumber(1, 100);
+            currentBox.textContent = randomNumber(0, 100);
             currentBox.classList.remove("noHover")
             currentBox.classList.remove("whenClicked")
         }

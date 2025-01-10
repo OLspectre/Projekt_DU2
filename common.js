@@ -28,7 +28,7 @@ function createNumberDivs(amount) {
         let divWithNumber = document.createElement("div");
         divWithNumber.classList.add("numberBoxes");
         numbersContainer.appendChild(divWithNumber);
-        divWithNumber.textContent = randomNumber(1, 100);
+        divWithNumber.textContent = randomNumber(0, 100);
     }
 }
 
