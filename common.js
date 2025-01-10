@@ -1,23 +1,21 @@
-
-
 // Home menu link
 let homeLink = document.createElement("a");
+let numberQuestion = document.createElement("div");
+let createNumberInput = document.createElement("input");
+let createButton = document.createElement("button");
+let numbersContainer = document.getElementById("numbers");
+
 homeLink.textContent = "Home"
 homeLink.setAttribute("href", "../index.html")
 document.querySelector("nav").appendChild(homeLink);
-
-
-let numberQuestion = document.createElement("div");
+createNumberInput.value = 95;
 document.getElementById("creator").appendChild(numberQuestion);
 numberQuestion.textContent = "How many numbers in the grid?"
-let createNumberInput = document.createElement("input");
 document.getElementById("creator").appendChild(createNumberInput);
 
-let createButton = document.createElement("button");
 createButton.textContent = "Create"
 document.getElementById("creator").appendChild(createButton);
 
-let numbersContainer = document.getElementById("numbers");
 
 // Töm container vid laddning
 numbersContainer.innerHTML = "";
