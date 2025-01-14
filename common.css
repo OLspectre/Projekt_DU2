@@ -11,9 +11,8 @@
 }
 
 body {
-    background-image: linear-gradient(beige, lightgreen, beige);
+    background-image: linear-gradient(rgb(122, 149, 171), skyblue, rgb(122, 149, 171));
     background-repeat: no-repeat;
-    background-color: be;
     background-size: cover;
     height: 100vh;
     font-family: "Rowdies";
@@ -26,16 +25,16 @@ input {
     font-family: "Rowdies";
     font-weight: lighter;
     font-size: 20px;
-
 }
 
 a {
+    color: white;
     text-decoration: none;
     font-size: 20px;
 }
 
 a:hover {
-    opacity: 0.75;
+    color: lightgray;
 }
 
 nav {
