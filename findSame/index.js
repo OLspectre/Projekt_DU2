@@ -11,7 +11,6 @@ resetBtn.addEventListener("click", () => {
     });
 });
 
-
 container.addEventListener("click", (event) => {
     let counterOfCopy = 0;
     loopThroughNumberBoxes((currentBox) => {
